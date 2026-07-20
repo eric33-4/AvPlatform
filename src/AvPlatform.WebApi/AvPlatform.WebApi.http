@@ -1,0 +1,48 @@
+@baseUrl = http://localhost:5200
+@missavId = L2VuL2Vya3ItMTAzMA
+@xvideosId = L3ZpZGVvLm9wbXBraWkyNzYwLzQ5ODk2Njc2LzAveXVfc2hpbm9kYV93aWxkX2phcGFuZXNlX2JhYmVfZ29lc19hbGxfb3V0X2ludGVuc2VfcGFzc2lvbmF0ZV9oYXJkY29yZV9hY3Rpb25f
+
+### 健康检查
+GET {{baseUrl}}/health
+
+### 渠道列表
+GET {{baseUrl}}/api/channels
+
+### YXFM 首页
+GET {{baseUrl}}/api/channels/yxfm/home
+
+### YXFM 搜索
+GET {{baseUrl}}/api/channels/yxfm/search?q=女作家
+
+### YXFM 详情
+GET {{baseUrl}}/api/channels/yxfm/items/1149
+
+### YXFM 播放
+GET {{baseUrl}}/api/channels/yxfm/items/1149/episodes/16442/play
+
+### MISSAV 首页
+GET {{baseUrl}}/api/channels/missav/home?refresh=true
+
+### MISSAV 详情
+GET {{baseUrl}}/api/channels/missav/items/{{missavId}}?refresh=true
+
+### MISSAV 播放信息
+GET {{baseUrl}}/api/channels/missav/items/{{missavId}}/episodes/main/play
+
+### MISSAV HLS 主清单
+GET {{baseUrl}}/api/channels/missav/items/{{missavId}}/episodes/main/stream
+
+### XVIDEOS 首页
+GET {{baseUrl}}/api/channels/xvideos/home?refresh=true
+
+### XVIDEOS 详情
+GET {{baseUrl}}/api/channels/xvideos/items/{{xvideosId}}?refresh=true
+
+### XVIDEOS 播放信息
+GET {{baseUrl}}/api/channels/xvideos/items/{{xvideosId}}/episodes/main/play
+
+### XVIDEOS HLS 主清单
+GET {{baseUrl}}/api/channels/xvideos/items/{{xvideosId}}/episodes/main/stream
+
+### 不存在的渠道
+GET {{baseUrl}}/api/channels/not-found/home

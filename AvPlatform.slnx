@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/WebApi/">
+    <Project Path="src/AvPlatform.WebApi/AvPlatform.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/WebClient/">
+    <Project Path="src/avplatform.webclient/avplatform.webclient.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="tests/AvPlatform.WebApi.Tests/AvPlatform.WebApi.Tests.csproj" />
+  </Folder>
+</Solution>

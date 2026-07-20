@@ -1,0 +1,5 @@
+* , *::before, *::after { box-sizing: border-box; }
+html { min-width: 320px; min-height: 100%; }
+body { min-height: 100vh; margin: 0; }
+button, input, audio { font: inherit; }
+img { display: block; max-width: 100%; }

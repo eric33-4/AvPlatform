@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/AvPlatform.WebApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Default: Data Source=/app/data/avplatform.db
+      UseHttpsRedirection: "false"
+    volumes:
+      - avplatform-data:/app/data
+    ports:
+      - "5200:8080"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: src/avplatform.webclient/Dockerfile
+    depends_on:
+      - api
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+volumes:
+  avplatform-data:
